@@ -1,3 +1,25 @@
+header{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 5px;
+}
+img{
+    width: 100px;
+}
+.search img{
+    width: 20px;
 nav a{
     border: none;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
