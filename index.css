@@ -1,25 +1,253 @@
+html {
+    font-size: 16px; 
+}
+
+body {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 header{
     display: flex;
     flex-direction:row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 2rem;
     border: 1px solid black;
-    margin: 5px;
+    margin: 0.5rem;
 }
 img{
-    width: 100px;
+    width: 10vw;
 }
 .search img{
-    width: 20px;
+    width: 2vw;
+}
 nav a{
-    border: none;
-    padding: 20px;
+    padding: 1.5rem; 
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 .search{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 1rem;
+}
+.user-ratings {
+    color: red;
+  }
+
+main{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 0.5rem;
+    padding: 2rem;
+    font-family: Helvetica;
+}
+.maturity-rating{
+    padding: 0.2rem;
+    border: 1px solid black;
+    border-radius: 20%;
+    border-width: 10%;
+    margin: 1rem;
+}
+h1{
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+button{
+   background-color: red;
+   color: white;  
+   width: 10rem;
+   height: 2.5rem;
+   border-radius: 0.5rem;
+}
+p{
+    text-align: left;
+    width: 70%;
+    font-size: 0.8rem;
+}
+.movie-details{
+    font-size: 0.8rem;
+
+}
+button:hover{
+    background-color: rgb(87, 9, 9);
+}
+.movie-details span{
+    color:red;
+    font-weight: bold;
+}
+
+.suggestions {
+    padding: 2rem;
+}
+
+.suggestion-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.suggestion-title h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.suggestion-title a{
+    text-decoration: none;
+    color: black;
+} 
+
+.suggestion-content {
+    display: flex;
+    overflow-x: auto; 
+    gap: 2rem; 
+}
+
+.suggestion-item {
+    width: 300px; 
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.suggestion-item-content {
+    text-align: center;
+}
+
+.suggestion-item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.suggestion-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+}
+
+.hidden-element{
+    visibility: hidden;
+    height: 200px;
+}
+
+.age {
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.duration-movie {
+    font-size: 1rem;
+    color: black;
+    margin: 1rem;
+}
+footer {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #222; 
+    color: #fff; 
+    padding: 0.2rem 0; 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+}
+
+footer div {
+    max-width: 100%; 
+    margin: 0 auto; 
+    padding: 0.5rem;
+}
+
+footer .social-items i {
+    font-size: 1.5rem; 
+    margin: 0 1rem; 
+    color: #fff; 
+    cursor: pointer; 
+    text-align: center;
+}
+
+footer .social-items img {
+    width: 3rem; 
+    margin: 0 0.8rem; 
+    cursor: pointer; 
+}
+
+footer nav a {
+    color: #fff; 
+    text-decoration: none; 
+    margin: 0 0.8rem; 
+    font-size: 0.9rem; 
+    text-align: left;
+}
+
+footer nav a:hover {
+    text-decoration: underline; 
+}
+
+footer .copyright {
+    font-size: 0.8rem; 
+    margin-top: 1rem;
+}
+
+footer .app-icons{
+    margin-top: 1rem;
+}
+
+footer .app-icons img {
+    width: 8rem; 
+    margin: 0 1rem; 
+}
+footer p{
+    width: 100%;
+}
+@media (max-width: 420px) {
+    html{
+        font-size: 10px;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+    .hidden-element{
+        display: none;
+    }
+    
+    .suggestion-item {
+        width: 60%; 
+    }
+    p {
+        width: 100%; 
+        font-size: 1.2rem; 
+    }
+    .suggestion-content {
+        gap: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem; 
+    }
+
+    button {
+        width: 12rem; 
+    }
+
+    footer .social-items i {
+        font-size: 1.5rem; 
+    }
+
+    footer nav a {
+        font-size: 1rem;
+    }
 }
