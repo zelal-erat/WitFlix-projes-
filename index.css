@@ -397,6 +397,129 @@ footer {
     margin: 0 auto;
 }
 
+:root {
+    /* Light mode variables */
+    --bg-primary-light: #f5f5f5;
+    --bg-secondary-light: #ffffff;
+    --text-primary-light: #141414;
+    --text-secondary-light: #666666;
+    --border-color-light: #e5e5e5;
+    
+    /* Dark mode variables */
+    --bg-primary-dark: #141414;
+    --bg-secondary-dark: #1f1f1f;
+    --text-primary-dark: #ffffff;
+    --text-secondary-dark: #a1a1a1;
+    --border-color-dark: rgba(255,255,255,0.1);
+
+    /* Common variables */
+    --accent-color: #E50914;
+    --accent-hover: #f40612;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--bg-primary-light);
+        color: var(--text-primary-light);
+    }
+
+    header {
+        background-color: var(--bg-secondary-light);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+        color: var(--text-primary-light);
+    }
+
+    .search input {
+        background: rgba(0,0,0,0.05);
+        border-color: var(--border-color-light);
+        color: var(--text-primary-light);
+    }
+
+    .search i {
+        color: var(--text-primary-light);
+    }
+
+    .suggestion-item {
+        background: var(--bg-secondary-light);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .suggestion-title h2 {
+        color: var(--text-primary-light);
+    }
+
+    .suggestion-title a {
+        color: var(--text-secondary-light);
+    }
+
+    .suggestion-item-content {
+        background: linear-gradient(to top, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 100%);
+    }
+
+    .suggestion-item h3 {
+        color: var(--text-primary-light);
+    }
+
+    .duration-movie {
+        color: var(--text-secondary-light);
+    }
+
+    .age {
+        background: rgba(0,0,0,0.1);
+        color: var(--text-primary-light);
+    }
+
+    .genre {
+        color: var(--text-secondary-light);
+    }
+}
+
+/* Dark mode stays as is, but using variables */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--bg-primary-dark);
+        color: var(--text-primary-dark);
+    }
+
+    header {
+        background-color: var(--bg-secondary-dark);
+    }
+
+    nav a {
+        color: var(--text-primary-dark);
+    }
+
+    .search input {
+        background: rgba(255,255,255,0.1);
+        border-color: var(--border-color-dark);
+        color: var(--text-primary-dark);
+    }
+
+    .search i {
+        color: var(--text-primary-dark);
+    }
+
+    .suggestion-item {
+        background: var(--bg-secondary-dark);
+    }
+
+    .suggestion-title h2 {
+        color: var(--text-primary-dark);
+    }
+
+    .suggestion-title a {
+        color: var(--text-secondary-dark);
+    }
+
+    footer {
+        background-color: var(--bg-secondary-dark);
+        border-top-color: var(--border-color-dark);
+    }
+}
+
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
